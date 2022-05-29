@@ -1,0 +1,21 @@
+.meal-container{
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid palevioletred;
+    box-shadow: violet;
+    border-radius: 5px;
+}
+
+.meal-container img{
+    width: 400px;
+    border-radius: 5px;
+}
+
+.meal-container button{
+    padding: 5px;
+    color: white;
+    background-color: forestgreen;
+    border-radius: 5px;
+    cursor: pointer;
+
+}

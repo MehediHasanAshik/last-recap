@@ -1,0 +1,18 @@
+.header-container{
+    line-height: 50px;
+    background-color: greenyellow;
+    font-weight: 700;
+}
+
+.header-container a{
+    text-decoration: none;
+    margin: 20px;
+}
+
+.header-container a:hover{
+    font-size: 20px;
+    background-color: green;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
