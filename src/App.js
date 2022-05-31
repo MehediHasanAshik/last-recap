@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <h1>Welcome to MealDB</h1>
       <Meals/>
     </div>
   );

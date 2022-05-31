@@ -1,4 +1,81 @@
 .meals-container{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    margin: 0 auto;
 }
+
+.banner{
+    background-image: url('../../foodbanner.jpg');
+    margin-bottom: 10px;
+    width: 100%;
+    height: 350px;
+}
+
+.banner h1{
+    padding-left: 25px;
+    margin-top: 0px;
+    align-items: center;
+    color: white;
+    text-align: left;
+    font-size: 60px;
+}
+.second-h1{
+    font-style: italic;
+    color: yellow !important;
+}
+
+.banner h3{
+    padding: 30px;
+    background: rgba(94, 79, 79, 0.5);
+    color: lightcyan;
+    text-align: left;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+#search-input{
+    width: 60%;
+    padding: 10px;
+    border: 2px solid rgb(160, 36, 14);
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+#search-btn{
+    padding: 9px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100px;
+    margin: 0px 5px;
+    border-radius: 10px;
+    background-color: darkgrey;
+}
+
+#search-btn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: cornflowerblue;
+
+}
+
+@media screen and (max-width: 960px) {
+    .meals-container{
+        grid-template-columns: repeat(2, 1fr);
+    
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+    .meals-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .banner h1{
+        text-align: center;
+        font-size: 30px;
+        padding: 0px;
+        padding-top: 20px;
+    }
+    .banner h3{
+        text-align: center;
+    }
+  }

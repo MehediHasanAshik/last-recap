@@ -1,45 +1,89 @@
-.meal-container{
+.meal-container {
     margin: 10px;
-    padding: 5px;
-    border: 2px solid palevioletred;
-    box-shadow: violet;
+    padding: 10px;
+    background-color: lightgray;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    ;
+    border-radius: 5px;
+    /* line-height: 10px; */
+}
+
+.meal-container img {
+    max-width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 
-.meal-container img{
-    width: 400px;
-    border-radius: 5px;
-}
-
-.meal-container button{
-    padding: 5px;
-    background-color: lightgreen;
-    border-radius: 5px;
+.meal-container button {
+    margin-top: 10px;
+    background-color: tomato;
+    border: 1px solid #d5d9d9;
+    border-radius: 15px;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    box-sizing: border-box;
+    color: white;
     cursor: pointer;
-    font-weight: 700;
+    font-size: 13px;
+    line-height: 29px;
+    padding: 0 10px 0 11px;
+    text-align: center;
+    font-weight: bold;
+    width: 100px;
+}
 
+.meal-container button:hover {
+    background-color: orange;
+}
+
+.meal-container button:focus {
+    border-color: #008296;
+    box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+    outline: 0;
 }
 
 .popup-content {
     margin: auto;
-    text-align: justify;
-    background: lightblue;
+    text-align: center;
+    background-color: orange;
     border: 2px solid lightgray;
     border-radius: 5px;
-    width: 100%;
-    padding: 5px 10px;
-  }
-  .popup-arrow {
-    color: lightgreen;
-  }
-  [role='tooltip'].popup-content {
+    border: 2px solid lightcoral;
+    width: 90%;
+    height: auto;
+    padding: 10px 20px;
+}
+
+.popup-arrow {
+    color: black;
+}
+
+[role='tooltip'].popup-content {
     width: 500px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
-  }
-  
-  .popup-overlay {
+}
+
+.popup-overlay {
     background: red;
-  }
-  [data-popup='tooltip'].popup-overlay {
+}
+
+[data-popup='tooltip'].popup-overlay {
     background: transparent;
-  }
+}
+
+.accord-btn {
+    text-align: center;
+    padding: 5px 10px;
+    height: 20px;
+}
+
+.link a{
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+}
+
+h2{
+    color: rgb(223, 68, 11);
+    font-size: 30px;
+    font-weight: 800;
+}

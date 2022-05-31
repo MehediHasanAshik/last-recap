@@ -1,26 +1,63 @@
 import React from 'react';
 import './Meal.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import Popup from 'reactjs-popup';
+import {
+    Accordion,
+    AccordionItem,
+    AccordionItemHeading,
+    AccordionItemButton,
+    AccordionItemPanel,
+} from 'react-accessible-accordion';
+import 'react-accessible-accordion/dist/fancy-example.css';
+
 
 const Meal = (props) => {
     console.log(props.meal)
-    const { strMeal, strArea, strCategory, strMealThumb, strInstructions } = props.meal;
+    const { strMeal, strArea, strCategory, strMealThumb, strInstructions, strYoutube } = props.meal;
+    let foods = props.meal
 
+    const ingredients = () => {
+        const keys = Object.keys(foods)
+        const ingredient = [];
+        for (const key of keys) {
+            if (key.includes('strIngredient')) {
+                ingredient.push(key)
+            }
+        }
+        return ingredient;
+
+    }
+    const ing = ingredients()
 
     const PopupExample = () => (
-        <Popup trigger={<button><FontAwesomeIcon icon={faArrowRight} /> Recipe </button>} position='top center'>
+        <Popup trigger={<button> Recipe </button>} position='top center'>
             {close => (
-                <div>
+                <div className='link'>
                     {strInstructions}
-                    <a className="close" onClick={close}>
-                        &times;
-                    </a>
+                    <br />
+                    <a href={strYoutube} target='_blank'>Watch on Youtube</a>
                 </div>
             )}
         </Popup>
     );
+
+    const AccordionExample = () => (
+        <Accordion allowZeroExpanded  allowMultipleExpanded={false} >
+            <AccordionItem>
+                <AccordionItemHeading>
+                    <AccordionItemButton className='accord-btn'>
+                        <b>Ingrediets</b>
+                    </AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                    {
+                        ing?.map(i => (i && i !== "") && <p>{foods[i]}</p>)
+
+                    }
+                </AccordionItemPanel>
+            </AccordionItem>
+        </Accordion>
+    )
 
 
     return (
@@ -29,10 +66,9 @@ const Meal = (props) => {
             <h2>{strMeal}</h2>
             <h4>Food Origin: {strArea}</h4>
             <h4>Food Category: {strCategory}</h4>
+            <AccordionExample />
             <PopupExample />
-
         </div>
-
     );
 
 };
